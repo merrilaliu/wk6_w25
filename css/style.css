@@ -1,0 +1,41 @@
+/* Base styles for mobile devices */
+.grid {
+    display: grid;
+    grid-template-columns: 2% 3% 90% 3% 2%;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    grid-column: 3 / 4; 
+    transition: box-shadow 0.3s ease;
+}
+
+.grid img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid img {
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 750px) {
+    .grid {
+        grid-template-columns: 2% 44% 4% 44% 2%;
+    }
+
+    .grid img:nth-child(odd) {
+        grid-column: 2 / 3;
+    }
+
+    .grid img:nth-child(even) {
+        grid-column: 4 / 5;
+    }
+}
+
+.grid img:first-child,
+.grid img:last-child {
+    border: none;
+    padding: 0;
+}
